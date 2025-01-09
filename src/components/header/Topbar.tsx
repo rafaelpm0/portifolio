@@ -1,16 +1,54 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
+import HideCard from "../HideCard/HideCard";
+import MenuButton from "./MenuButton";
 
 function Topbar() {
+  
+  const [modalsControl, setModalsControl] = useState([false, false, false]);
+  function uniqueVisible(index: number, data: boolean[]) {
+    const newData = data.map((data, data_index)=>{
+      if(data_index === index){
+        return true
+      }
+      return false
+    })
+    setModalsControl(newData);
+  }
+  function allInvisible(data: boolean[]) {
+    const newData =  Array.from({length: data.length}, ()=>false)
+    setModalsControl(newData);
+  }
+
   return (
-    <div className='flex flex-row w-full justify-center space-x-1 font-sans text-white font-[700] blur(40px) max-w-[1240px] h-[55px]' >
-       <div className="w-[64px] p-[10px] bg-[rgba(0,0,0,0.8)] flex justify-center items-center rounded-[4px] cursor-pointer">HOME</div>
-      <div className="w-[100%] p-[10px] bg-[rgba(0,0,0,0.8)] flex justify-center items-center rounded-[4px]">
-        <p className="w-[120px] text-center">COMP 1</p>
-        <p className="w-[120px] text-center">COMP 2</p>
-        <p className="w-[120px] text-center">COMP 3</p>
+ 
+      <div className="w-full">
+        <div className="flex flex-row w-full justify-center space-x-1 font-sans text-white font-[700] blur(40px) max-w-[1240px] h-[55px] relative z-10 mx-auto">
+        <div className="w-[64px] p-[10px] bg-[rgba(0,0,0,0.8)] flex justify-center items-center rounded-[4px] cursor-pointer">
+          HOME
+        </div>
+        <ul className="w-[100%] bg-[rgba(0,0,0,0.8)] flex justify-center items-center rounded-[4px]">
+          <li className="h-full"><MenuButton title="Comp 1" href="/" padding={"32"} onEnter={()=>{uniqueVisible(0, modalsControl)}}/></li>
+          <li className="h-full"><MenuButton title="Comp 2" href="/" padding={"32"} onEnter={()=>{uniqueVisible(1, modalsControl)}}/></li>
+          <li className="h-full"><MenuButton title="Comp 3" href="/" padding={"32"} onEnter={()=>{uniqueVisible(2, modalsControl)}}/></li>
+        </ul>
+        <div className="w-[64px] p-[10px] bg-[rgba(0,0,0,0.8)] flex justify-center items-center rounded-[4px] cursor-pointer">
+          ICON
+        </div>
+        </div>
+
+        <HideCard isVisible={modalsControl[0]} onLeave={()=>{allInvisible(modalsControl)}}>
+          <p style={{ background: "#db1717bc", color:"white", height: "500px" }}>TESSTE DE CONTEUDO A</p>
+        </HideCard>
+        <HideCard isVisible={modalsControl[1]}  onLeave={()=>{allInvisible(modalsControl)}}>
+          <p style={{ background: "#000000", color:"white" }}>TESSTE DE CONTEUDO B</p>
+        </HideCard>
+        <HideCard isVisible={modalsControl[2]}  onLeave={()=>{allInvisible(modalsControl)}}>
+          <p style={{ background: "#000000", color:"white" }}>TESSTE DE CONTEUDO C</p>
+        </HideCard>
       </div>
-      <div className="w-[64px] p-[10px] bg-[rgba(0,0,0,0.8)] flex justify-center items-center rounded-[4px] cursor-pointer">ICON</div>
-    </div>
+    
+
   );
 }
 

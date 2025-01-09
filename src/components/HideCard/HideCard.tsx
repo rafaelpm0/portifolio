@@ -2,21 +2,21 @@ import React from 'react'
 import styles from './styles.module.css'
 
 type Props = {
-    title?: string
+    isVisible?: boolean
     children?: React.ReactNode
+    onLeave?: any
 }
 
 function HideCard(Props: Props) {
   
-    const { title, children } = Props;
+    const { children, isVisible, onLeave } = Props;
+    const hidden = isVisible ? '' : 'hidden';
 
     return (
-    <div className='hide-card-container'>
-      <div className={styles.title_container}>
-        <h1 className='hide-card-title'>{title}</h1>
-        <div className='hide-card-line'></div>
-      </div>
-      <div className={styles.modal}>
+    <div 
+    className={`w-full ${hidden} fixed top-0 left-0 h-[535px]`}
+    onMouseLeave={() => onLeave()}>
+      <div className={styles.children_container}>
         {children}
       </div>
     </div>
