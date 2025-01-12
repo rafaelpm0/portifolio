@@ -1,5 +1,5 @@
 
-import Carrossel from "@/components/Carrossel";
+import Carrossel from "@/components/Home/Carrossel";
 import ColorShelf from "@/components/Home/ColorShelf";
 import ExperienceCard from "@/components/Home/ExperienceCard";
 import React from "react";
