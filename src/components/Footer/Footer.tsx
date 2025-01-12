@@ -9,9 +9,9 @@ import { IoLogoInstagram } from "react-icons/io5";
 
 function Footer() {
   return (
-    <footer className="w-[100%] max-w-[90rem] mb-[120px] ">
+    <footer className="w-[100%] max-w-[78rem] mb-[120px] ">
       <main
-        className="bg-[#212429]  max-w-[90rem]  rounded-b-[16px] flex flex-col items-center pb-[40px] px-[2rem] pt-[80px] relative
+        className="bg-[#212429]  max-w-[78rem]  rounded-b-[16px] flex flex-col items-center pb-[40px] px-[2rem] pt-[80px] relative
        shadow-[0_2.5px_2px_0_rgba(0,0,0,0.06),0_1px_0_0_rgba(0,0,0,0.05),0_2px_2px_0_rgba(0,0,0,0.15),0_4px_6px_0_rgba(0,0,0,0.1)]"
       >
         <div className="w-[100%] max-w-[90rem] bg-[#fff] rounded-b-[16px] h-[8px] absolute inset-0 top-[-1px]"></div>

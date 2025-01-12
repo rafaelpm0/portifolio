@@ -1,6 +1,7 @@
 
-import ColorShelf from "@/components/ColorShelf";
-import ExperienceCard from "@/components/ExperienceCard";
+import Carrossel from "@/components/Carrossel";
+import ColorShelf from "@/components/Home/ColorShelf";
+import ExperienceCard from "@/components/Home/ExperienceCard";
 import React from "react";
 
 
@@ -11,7 +12,8 @@ export default function Home() {
       <div style={{height:'400px'}}></div>
       <ExperienceCard/>
       <ColorShelf/>
- 
+      <Carrossel/>
+    
     </main> // revisar esse 100vh apos ter conteudo 
  
   );
