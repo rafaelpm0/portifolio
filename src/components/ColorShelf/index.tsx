@@ -92,12 +92,13 @@ function ColorShelf() {
   const firstHalf = skills.slice(0, 6);
   const secondHalf = skills.slice(6, 12);
 
-  return (
-    <div id="skills" className="">
-      <h2 className="text-[40px] font-bold ml-[16px] lg:ml-[100px] pb-[40px]">
+  return ( 
+    <div id="skills" className="lg:mx-[100px] mb-[40px] lg:mb-[80px]">
+      <div id="divider-line" className="h-[1px] bg-[#6e7072] w-[100%] mb-[40px]"></div>
+      <h2 className="text-[40px] font-bold ml-[16px] pb-[20px]">
         Habilidades
       </h2>
-      <div className="flex flex-col lg:flex-row justify-between mx-[16px] lg:mx-[100px] mb-[40px] lg:mb-[80px] gap-[4px] lg:gap-[40px]">
+      <div className="flex flex-col lg:flex-row justify-between mx-[16px] gap-[4px] lg:gap-[40px]">
         <div id="shelfA" className="flex flex-col gap-[4px] lg:w-[calc(50%-20px)]">
           {firstHalf.map((skill, index) => (
             <Shelf

@@ -1,0 +1,30 @@
+import React from 'react'
+import Image from 'next/image'
+
+type Props = {
+    title: string;
+    photo: string;
+    description: string;
+    imageSide: 'left' | 'right';
+}
+
+
+function Card(props: Props) {
+  
+  const { title, description, photo, imageSide } = props;
+  const side = imageSide === 'left' ? 'flex-row' : 'flex-row-reverse';
+
+    return (
+    <div > 
+      <h3 className='text-[20px] lg:text-[30px]'>{title}</h3>
+      <div className={`flex ${side} items-center gap-[2px]`}>
+        
+        <Image src={photo} alt={photo} width={200} height={200}/>  
+        <p className='text-[16px] lg:text-[25px]'>{description}</p>
+      </div>
+    </div>
+  )
+}
+
+export default Card
+// OBS AJUSTAR A IMAGEM, IRA FICAR TEMPORARIAMENTE ASSIM
