@@ -1,27 +1,34 @@
 import {
   Card as UICard,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
 import React from "react";
+import Image from "next/image";
 
-function Card() {
+type Hobby = {
+  title: string;
+  image: string;
+};
+
+type CardProps = {
+  hobby: Hobby
+}
+
+function Card({hobby} : CardProps) {
+  
+  const { title, image } = hobby;
+  
   return (
-    <UICard>
+    <UICard className="h-[220px]">
       <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
+        <CardTitle>{title}</CardTitle>
       </CardHeader>
-      <CardContent>
-        <p>Card Content</p>
+      <CardContent className="flex items-center">
+        <img src={image} alt={title} className="h-[100%] w-[100%]"/>
       </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
     </UICard>
   );
 }

@@ -17,10 +17,10 @@ function MenuButton(Props: Props) {
     
 
     return (
-    <Link href={href} className={`group h-full flex items-center justify-center cursor-pointer px-[${padding}px] relative`}
+    <Link href={href} className={`group h-full flex items-center justify-center cursor-pointer relative`} style={{padding: `0 ${padding} 0 ${padding}`}}
     onMouseEnter={() => onEnter()}>
       <h1 className='opacity-80 group-hover:opacity-100'>{title}</h1>
-      <div className='w-full absolute bg-black bottom-0 h-[1px] group-hover:bg-[white]'></div>
+      <div className='w-full absolute bg-black bottom-0 h-[2px] group-hover:bg-[white]'></div>
     </Link>
   )
 }
