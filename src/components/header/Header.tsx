@@ -3,7 +3,7 @@ import Topbar from './Topbar'
 
 function Header() {
   return (
-    <header className='w-full px-[16px] fixed top-[25px] flex justify-center'>
+    <header className='w-full px-[16px] top-[25px] flex justify-center relative z-10'>
     <Topbar />
    </header>
   )

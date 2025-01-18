@@ -38,10 +38,6 @@ const experiences: Experience[] = [
 function Index() {
   return (
     <div id="experiences" className="lg:mx-[100px] mb-[40px] lg:mb-[80px]">
-      <div
-        id="divider-line"
-        className="h-[1px] bg-[#6e7072] w-[100%] mb-[40px]"
-      ></div>
       <h2 className="text-[30px] sm:text-[40px] font-bold ml-[16px] pb-[20px]">Experiência</h2>
       <div className="mx-[16px] flex flex-col gap-[32px]">
         {experiences.map((experience, index) => (

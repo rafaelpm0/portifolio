@@ -78,11 +78,11 @@ function index() {
           id="divider-line"
           className="h-[1px] bg-[#6e7072] w-[100%] mb-[40px]"
         ></div>
-        <h2 className="text-[30px] sm:text-[40px] font-bold ml-[16px] mb-[32px]">
+        <h2 className="text-[30px] sm:text-[40px] font-bold ml-[16px] ">
           Hobbies
         </h2>
       </div>
-      <div className="lg:px-[100px] lg:py-[40px] mb-[40px] px-[16px]">
+      <div className="lg:px-[100px] py-[32px] px-[16px]">
         {isLoading && (
           <Carousel>
             <CarouselContent>
