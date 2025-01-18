@@ -22,8 +22,8 @@ function Topbar() {
 
   return (
  
-      <div className="w-full absolute ">
-        <div className="flex flex-row w-full justify-center space-x-1 font-sans text-white font-[700] blur(40px) max-w-[64rem] h-[55px] mx-auto">
+    <div className="w-full">
+        <div className="flex relative z-[3] flex-row w-full justify-center space-x-1 font-sans text-white font-[700] blur(40px) max-w-[64rem] h-[55px] mx-auto">
         <div className="w-[64px] p-[10px] bg-[rgba(0,0,0,0.8)] flex justify-center items-center rounded-[4px] cursor-pointer">
           HOME
         </div>
