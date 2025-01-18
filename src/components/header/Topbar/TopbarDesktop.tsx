@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from "react";
-import HideCard from "../HideCard/HideCard";
-import MenuButton from "./MenuButton";
+import HideCard from "../../HideCard/HideCard";
+import MenuButton from "../MenuButton";
 
 function Topbar() {
   
