@@ -46,7 +46,7 @@ const DrawerOverlay = React.forwardRef<
 ));
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
-const drawerContentVariants = cva('fixed z-50 flex h-auto flex-col border bg-[#F5F5F7]', {
+const drawerContentVariants = cva('fixed z-50 flex h-100% flex-col border bg-[#F5F5F7] overflow-auto', {
   variants: {
     direction: {
       right: 'ml-24 right-0 rounded-l-[10px] inset-y-0',
@@ -88,7 +88,7 @@ const DrawerContent = React.forwardRef<
 DrawerContent.displayName = 'DrawerContent';
 
 const DrawerHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn('grid gap-1.5 p-4 text-center sm:text-left', className)} {...props} />
+  <div className={cn('grid gap-1.5 p-4 text-center sm:text-left overflow-auto', className)} {...props} />
 );
 DrawerHeader.displayName = 'DrawerHeader';
 

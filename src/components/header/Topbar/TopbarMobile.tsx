@@ -22,11 +22,36 @@ import {
 } from "react-icons/fi";
 import { FaWindowClose } from "react-icons/fa";
 import InfoCard from "@/components/InfoCards";
+import CustomCard from "@/components/ProjectCard";
+
+type Project = {
+  image: string;
+  title: string;
+  description: string;
+  link: string;
+};
+
+const projects: Project[] = [
+  {
+    image: "/agendador.png",
+    title: "Jobber",
+    description:
+      "Uma ferramenta de agendamento de tarefas desenvolvida com Python (Django) e Next.js. O objetivo é armazenar tarefas em um banco de dados local, registrando títulos, descrições e imagens associadas. Ideal para organizar e gerenciar atividades de forma eficiente e concisa.",
+    link: "https://github.com/rafaelpm0/jober",
+  },
+  {
+    image: "/email.png",
+    title: "API de Automação de E-mail",
+    description:
+      "Projeto que permite o envio de e-mails personalizados com base em modelos predefinidos e tags associadas aos remetentes ou tags adicionais. Utiliza Node.js, Express.js, SQLite e Nodemailer.",
+    link: "https://github.com/rafaelpm0/Projeto_API_Javascript",
+  },
+];
 
 function TopbarMobile() {
   return (
     <Drawer direction="left" wfull="full">
-      <div className="w-[100%] bg-[rgba(0,0,0,0.8)]  rounded-[8px]">
+      <div className="w-[100%] bg-[rgba(0,0,0,0.8)] rounded-[8px]">
         <div className="text-[#fff] relative flex justify-center items-center h-[35px]">
           <DrawerTrigger className="bg-[#000000b6] hover:bg-[#333333] rounded-l-[8px] absolute left-0">
             <FiAlignJustify size={35} color="#fff" />
@@ -50,7 +75,20 @@ function TopbarMobile() {
                 Projetos
               </AccordionTrigger>
               <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
+              <div className="flex flex-wrap gap-4">
+                {projects.map((project, index) => (
+                  <CustomCard
+                    key={index}
+                    image={project.image}
+                    title={project.title}
+                    description={project.description}
+                    linkText="Ver Projeto"
+                    linkUrl={project.link}
+                    column={true}
+
+                  />
+                ))}
+              </div>
               </AccordionContent>
             </AccordionItem>
 
