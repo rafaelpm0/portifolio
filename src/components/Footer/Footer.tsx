@@ -16,14 +16,14 @@ function Footer() {
       >
         <div className="w-[100%] max-w-[90rem] bg-[#fff] rounded-b-[16px] h-[8px] absolute inset-0 top-[-1px]"></div>
         <div className="flex flex-col gap-[60px]  w-full max-w-[1240px] justify-between pb-[60px] sm:flex-row sm:gap-0">
-          <div className="flex">
+          {/* <div className="flex">
             <div className={`flex flex-col gap-[32px] ${footerPages} `}>
               <p className="hover:text-[#ff4c00]">COMP 1</p>
               <p className="hover:text-[#ff4c00]">COMP 2</p>
               <p className="hover:text-[#ff4c00]">COMP 3</p>
               <p className="hover:text-[#ff4c00]">COMP 4</p>
             </div>
-          </div>
+          </div> */}
           <div className="flex flex-row gap-[16px]">
             <LiaLinkedinIn size={35}  className="cursor-pointer text-[#fff] hover:text-[#ff4c00]" />
             <FaFacebookF size={30}  className="cursor-pointer  text-[#fff] hover:text-[#ff4c00]" />

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import HideCard from "../../HideCard/HideCard";
 import MenuButton from "../MenuButton";
+import Contact from '../ButtonHiddenContent/Contact'
 
 function Topbar() {
   
@@ -38,13 +39,13 @@ function Topbar() {
         </div>
 
         <HideCard isVisible={modalsControl[0]} onLeave={()=>{allInvisible(modalsControl)}}>
-          <p style={{ background: "#db1717bc", color:"white", height: "500px" }}>TESSTE DE CONTEUDO A</p>
+
         </HideCard>
         <HideCard isVisible={modalsControl[1]}  onLeave={()=>{allInvisible(modalsControl)}}>
-          <p style={{ background: "#000000", color:"white" }}>TESSTE DE CONTEUDO B</p>
+    
         </HideCard>
         <HideCard isVisible={modalsControl[2]}  onLeave={()=>{allInvisible(modalsControl)}}>
-          <p style={{ background: "#000000", color:"white" }}>TESSTE DE CONTEUDO C</p>
+          <Contact/>
         </HideCard>
       </div>
     

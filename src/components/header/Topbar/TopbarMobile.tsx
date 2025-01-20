@@ -3,13 +3,25 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { FiAlignJustify } from "react-icons/fi";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  FiAlignJustify,
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiPhone,
+} from "react-icons/fi";
+import { FaWindowClose } from "react-icons/fa";
+import InfoCard from "@/components/InfoCards";
 
 function TopbarMobile() {
   return (
@@ -24,7 +36,67 @@ function TopbarMobile() {
       </div>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerClose>Cancel</DrawerClose>
+          <DrawerClose>
+            <FaWindowClose size={30} className="ml-auto" />
+          </DrawerClose>
+          <Accordion type="single" collapsible className="">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-[18px] font-bold">Quem sou eu?</AccordionTrigger>
+              <AccordionContent></AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-[18px] font-bold">
+                Projetos
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-[18px] font-bold">
+                Contato
+              </AccordionTrigger>
+              <AccordionContent>
+                <ul className="text-[1.25rem]">
+                  <li>
+                    <InfoCard
+                      icon={FiPhone}
+                      title="Telefone"
+                      text="48 9-9838-5803"
+                      link=""
+                      isLink={false}
+                    />
+                  </li>
+                  <li>
+                    <InfoCard
+                      icon={FiMail}
+                      title="Email"
+                      text="rafaelpmedeiros00@gmail.com"
+                      link="mailto:rafaelpmedeiros00@gmail.com"
+                    />
+                  </li>
+                  <li>
+                    <InfoCard
+                      icon={FiLinkedin}
+                      title="LinkedIn"
+                      text="Conecte-se comigo no LinkedIn:"
+                      link="https://www.linkedin.com/in/rafael-pinho-medeiros/"
+                    />
+                  </li>
+                  <li>
+                    <InfoCard
+                      icon={FiGithub}
+                      title="GitHub"
+                      text="Veja meus projetos no GitHub:"
+                      link="https://github.com/rafaelpm0"
+                    />
+                  </li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </DrawerHeader>
       </DrawerContent>
     </Drawer>
