@@ -55,7 +55,7 @@ function TopbarMobile() {
     <Drawer direction="left" wfull="full">
       <div className="w-[100%] bg-[rgba(0,0,0,0.8)] rounded-[8px]">
         <div className="text-[#fff] relative flex justify-center items-center h-[35px]">
-          <DrawerTrigger className="bg-[#000000b6] hover:bg-[#333333] rounded-l-[8px] absolute left-0">
+          <DrawerTrigger className="bg-[#000000b6] hover:bg-[#9b9b9b] rounded-l-[8px] absolute left-0">
             <FiAlignJustify size={35} color="#fff" />
           </DrawerTrigger>
           <DrawerTitle>Portifólio</DrawerTitle>
@@ -101,7 +101,7 @@ function TopbarMobile() {
                 Contato
               </AccordionTrigger>
               <AccordionContent>
-                <ul className="text-[1.25rem]">
+                <ul className="text-[1.25rem] flex flex-col gap-[8px]">
                   <li>
                     <InfoCard
                       icon={FiPhone}

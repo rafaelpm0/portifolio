@@ -11,7 +11,7 @@ type InfoCardProps = {
 
 const InfoCard: React.FC<InfoCardProps> = ({ icon: Icon, title, text, link, isLink=true}) => {
   return (
-    <div className="p-4 border rounded-lg shadow-md flex items-center space-x-4 h-[100%]">
+    <div className="p-4 border rounded-lg shadow-md flex items-center space-x-4 h-[100%] bg-[#fff]">
       <Icon size={40} className="text-blue-500" />
       <div className='text-left'>
         <h3 className="text-xl font-bold">{title}</h3>

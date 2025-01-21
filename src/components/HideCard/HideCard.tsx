@@ -12,7 +12,7 @@ function HideCard({ children, isVisible, onLeave }: Props) {
 
   return (
     <div
-      className={`w-full fixed top-0 left-0 h-[535px] transition-opacity duration-500 ${hidden}`}
+      className={`w-full fixed top-0 left-0 h-full transition-opacity duration-500 ${hidden}`}
       onMouseLeave={() => onLeave()}
     >
       {children}
