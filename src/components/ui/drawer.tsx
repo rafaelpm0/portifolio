@@ -61,7 +61,7 @@ const drawerContentVariants = cva('fixed z-50 flex h-100% flex-col border bg-[#c
   },
   defaultVariants: {
     direction: 'right',
-    wfull: 'responsive'
+    wfull: 'full'
   },
 });
 
