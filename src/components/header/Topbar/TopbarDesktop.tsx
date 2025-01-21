@@ -5,6 +5,7 @@ import MenuButton from "../MenuButton";
 import Contact from "../HiddenContent/Contact";
 import Projects from "../HiddenContent/Projects";
 import { GiCircuitry } from "react-icons/gi";
+import WhoIam from "../HiddenContent/WhoIam";
 
 function Topbar() {
   const [modalsControl, setModalsControl] = useState([false, false, false]);
@@ -70,7 +71,9 @@ function Topbar() {
         onLeave={() => {
           allInvisible(modalsControl);
         }}
-      ></HideCard>
+      >
+        <WhoIam />
+      </HideCard>
       <HideCard
         isVisible={modalsControl[1]}
         onLeave={() => {

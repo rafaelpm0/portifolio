@@ -6,7 +6,7 @@ const liContainer = "mb-4";
 
 function Contact() {
   return (
-    <div id="hidden-contact" className="bg-[#c0c0c0] h-full opacity-95 flex justify-center">
+    <div id="hidden-contact" className="bg-[#c0c0c0] h-full opacity-95 flex justify-center px-[16px]">
       <div className="flex flex-col w-full max-w-[82rem] justify-start mt-[8rem] text-[#000]">
         <h2 className="text-[2.5rem] font-bold mb-[2rem]">Contato</h2>
         <ul className="text-[1.25rem] flex flex-row gap-[8px]">

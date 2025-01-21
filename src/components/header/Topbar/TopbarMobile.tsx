@@ -23,6 +23,7 @@ import {
 import { FaWindowClose } from "react-icons/fa";
 import InfoCard from "@/components/InfoCards";
 import CustomCard from "@/components/ProjectCard";
+import WhoIam from "../HiddenContent/WhoIam";
 
 type Project = {
   image: string;
@@ -48,6 +49,7 @@ const projects: Project[] = [
   },
 ];
 
+
 function TopbarMobile() {
   return (
     <Drawer direction="left" wfull="full">
@@ -67,7 +69,9 @@ function TopbarMobile() {
           <Accordion type="single" collapsible className="">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-[18px] font-bold">Quem sou eu?</AccordionTrigger>
-              <AccordionContent></AccordionContent>
+              <AccordionContent>
+                  <WhoIam/>
+              </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-2">

@@ -34,7 +34,7 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <div className="bg-[#708090] h-full w-full flex opacity-95">
+    <div className="bg-[#708090] h-full w-full flex opacity-95 px-[16px]">
       <div className="mx-auto mt-[128px] w-full max-w-[82rem]">
         <h2 className="text-[2.5rem] font-bold mb-[32px] w-full">Projetos</h2>
         <div className="max-w-[72rem] mx-auto">

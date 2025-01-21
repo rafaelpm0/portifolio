@@ -11,7 +11,7 @@ type CustomCardProps = {
 
 const CustomCard: React.FC<CustomCardProps> = ({ image, title, description, linkText, linkUrl, column = false }) => {
   return (
-    <div className={`p-4 border h-full w-fiçç rounded-lg shadow-md ${column ? 'flex flex-col' : 'flex flex-row'}  space-x-4`}>
+    <div className={`p-4 border h-full bg-[#f5f5f7] rounded-lg shadow-md ${column ? 'flex flex-col' : 'flex flex-row'}  space-x-4`}>
       <div className={`${column ? 'mb-[32px]' : 'mr-4'} flex w-50%`}>
         <img src={image} alt={title} className="max-h-[300px] object-cover rounded-[8px]" />
       </div>
