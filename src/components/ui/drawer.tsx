@@ -8,20 +8,20 @@ import { cn } from '@/lib/utils';
 
 const DrawerContext = React.createContext<{ direction?: 'right' | 'top' | 'bottom' | 'left', wfull?: 'full' | 'responsive' }>({
   direction: 'right',
-  wfull: 'full'
+ 
 });
 
 const Drawer = ({
   shouldScaleBackground = true,
   direction = 'right',
-  wfull = 'responsive',
+
   ...props
 }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
-  <DrawerContext.Provider value={{ direction, wfull }}>
+  <DrawerContext.Provider value={{ direction }}>
     <DrawerPrimitive.Root
       shouldScaleBackground={shouldScaleBackground}
       direction={direction}
-      wfull={wfull}
+  
       {...props}
     />
   </DrawerContext.Provider>
