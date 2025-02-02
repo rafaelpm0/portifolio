@@ -61,7 +61,7 @@ function Topbar() {
             />
           </li>
         </ul>
-        <div className="w-[64px] p-[10px] bg-[rgba(0,0,0,0.8)] flex justify-center items-center rounded-[4px] cursor-pointer">
+        <div className="w-[64px] p-[10px] bg-[rgba(0,0,0,0.8)] flex justify-center items-center rounded-[4px]">
           <GiCircuitry size={45}/>
         </div>
       </div>

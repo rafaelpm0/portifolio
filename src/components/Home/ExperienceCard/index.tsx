@@ -11,7 +11,7 @@ type Experience = {
 const experiences: Experience[] = [
   {
     title: "Avanti, Florianópolis — Dev. Web/Mobile - - Julho de 2024 : Presente",
-    description: "Desenvolvimento de soluções web e e-commerce utilizando a plataforma VTEX. Atuação com tecnologias como CSS, HTML, React, React Native, GraphQL, Node.js, TypeScript, além de integração com APIs e criação de aplicações customizada.",
+    description: "Atuação no suporte de desenvolvimento, com foco em correções e implementação de e-commerce, utilizando Vtex Framework, React, TypeScript, HTML/CSS/SASS. Experiência no laboratório de desenvolvimento, com ênfase na criação de ferramentas personalizadas. Participação em projeto de aplicação mobile com React Native, TypeScript e TailwindCSS, além de projeto voltado à aplicação de inteligência artificial em textos, empregando React, AWS (API Gateway, DynamoDB, Step Functions) e GraphQL.",
     imageSide: "left",
     photo: "/penseavanti_logo.jfif"
   },
